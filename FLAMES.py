@@ -1,6 +1,6 @@
 def nameProcessing():
-    name1 = "NATARAJAN"
-    name2 = "DHANAM"
+    name1 = input('Enter First Name  : ');    name1 = name1.upper();    name1.replace(" ", "")  
+    name2 = input('Enter Second Name : ');    name2 = name2.upper();    name2.replace(" ", "") 
     cut = 0
     totNameLen = len(name1) + len (name2)
     for a in name1:
@@ -12,10 +12,8 @@ def nameProcessing():
     return flamesCount
 
 def flameFinder():
-    flames = ("Friends", "Love", "Affection", "Marriage", "Enemy", "Siblings")
-    a = 2
-    b = 0
-    j = 1
+    flames = ("FRIENDS", "LOVE", "AFFECTION", "MARRIAGE", "ENEMY", "SIBLINGS")
+    a = 2;    b = 0;    j = 1
     flamesCutCount = nameProcessing()
     while(j<6):
         if(len(flames) != 1):
@@ -32,5 +30,8 @@ def flameFinder():
         j+=1
     return flames
 
+print("====================================***START***======================================\n")
 flameStatus = flameFinder()
-print("Predicted Relationship :",*flameStatus)
+print("\nPredicted Relationship >>>",*flameStatus)
+
+print("\n=====================================***END***=======================================")
