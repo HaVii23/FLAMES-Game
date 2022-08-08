@@ -3,16 +3,13 @@ def nameProcessing():
     name2 = input('Enter Second Name : ');    name2 = name2.upper().replace(' ','')
     cut = 0
     totNameLen = len(name1) + len (name2)
-    print(name1,name2)
     for a in name1:
         for b in name2:
             if (a==b):
                 name2=name2.replace(b,'',1)
                 cut +=1
-                print(b)
                 break
     flamesCount = totNameLen - (cut*2)
-    print(flamesCount)
     return flamesCount
 
 def flameFinder():
@@ -29,7 +26,6 @@ def flameFinder():
                     flameList.remove(i)
                     flames= tuple(flameList)
                     flames = flames[Ind:] + flames [:Ind]
-                    print(flames)
                     a += 1
             b = 0
         j+=1
