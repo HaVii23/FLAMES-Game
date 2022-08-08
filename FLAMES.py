@@ -11,7 +11,7 @@ def nameProcessing():
     flamesCount = totNameLen - (cut*2)
     return flamesCount
 
-flames = "FLAMES"
+flames = ("Friends", "Love", "Affection", "Marriage", "Enemy", "Siblings")
 a = 2
 b = 0
 j = 1
@@ -22,10 +22,15 @@ while(j<6):
             b += 1 
             if(b == flamesCutCount):
                 Ind = flames.index(i)
-                flames = flames.replace(i,"",1)
+                flameList = list(flames)
+                flameList.remove(i)
+                flames= tuple(flameList)
                 flames = flames[Ind:] + flames [:Ind]
                 a += 1
                 print("FLAMES :",flames)
         b = 0
     j+=1
+
+FLAMESDICT = {'F':"Friends", "L":"Love", "A": "Affection", "M":"Marriage", "E":"Enemy", "S":"Siblings"}
+
 
