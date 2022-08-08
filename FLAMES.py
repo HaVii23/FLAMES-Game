@@ -11,26 +11,26 @@ def nameProcessing():
     flamesCount = totNameLen - (cut*2)
     return flamesCount
 
-flames = ("Friends", "Love", "Affection", "Marriage", "Enemy", "Siblings")
-a = 2
-b = 0
-j = 1
-flamesCutCount = nameProcessing()
-while(j<6):
-    if(len(flames) != 1):
-        for i in flames*a:
-            b += 1 
-            if(b == flamesCutCount):
-                Ind = flames.index(i)
-                flameList = list(flames)
-                flameList.remove(i)
-                flames= tuple(flameList)
-                flames = flames[Ind:] + flames [:Ind]
-                a += 1
-                print("FLAMES :",flames)
-        b = 0
-    j+=1
+def flameFinder():
+    flames = ("Friends", "Love", "Affection", "Marriage", "Enemy", "Siblings")
+    a = 2
+    b = 0
+    j = 1
+    flamesCutCount = nameProcessing()
+    while(j<6):
+        if(len(flames) != 1):
+            for i in flames*a:
+                b += 1 
+                if(b == flamesCutCount):
+                    Ind = flames.index(i)
+                    flameList = list(flames)
+                    flameList.remove(i)
+                    flames= tuple(flameList)
+                    flames = flames[Ind:] + flames [:Ind]
+                    a += 1
+            b = 0
+        j+=1
+    return flames
 
-FLAMESDICT = {'F':"Friends", "L":"Love", "A": "Affection", "M":"Marriage", "E":"Enemy", "S":"Siblings"}
-
-
+flameStatus = flameFinder()
+print("Predicted Relationship :",*flameStatus)
