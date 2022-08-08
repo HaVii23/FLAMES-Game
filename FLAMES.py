@@ -19,7 +19,7 @@ def nameProcessing():
         sys.exit()
 
 def flameFinder():
-    flames = ("FRIENDS", "LOVE", "AFFECTION", "MARRIAGE", "ENEMY", "SIBLINGS")
+    flames = ("FRIENDS👫👭👬", "LOVE👩‍❤️‍👨👩‍❤️‍👩👨‍❤️‍👨", "AFFECTION🥰", "MARRIAGE💍❣️", "ENEMY😠", "SIBLINGS😍")
     a = 10;    b = 0;    j = 1
     flamesCutCount = nameProcessing()
     while(j<6):
