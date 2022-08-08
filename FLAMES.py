@@ -1,3 +1,11 @@
+""" 
+    FLAMES GAME
+
+Author  : Hari Vignesh A 
+E-mail  : harivignesh201@gmail.com
+Created : 08/08/2022 - 23:21
+
+"""
 import sys
 import os
 os.system('cls')
